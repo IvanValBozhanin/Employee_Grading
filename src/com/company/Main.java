@@ -15,20 +15,22 @@ public class Main {
         printAll();
         System.out.println("Sum of wages: " + sumOfWages());
         System.out.println("--------------------------");
+
         removeEmployee("df");
         printAll();
         System.out.println("Sum of wages: " + sumOfWages());
-
         System.out.println("--------------------------");
+
         removeEmployee("ddd"); // exception is thrown
         printAll();
-
-        System.out.println("--------------------------");
-        correctWage("Z", 1000);
         System.out.println("Sum of wages: " + sumOfWages());
-        printAll();
-
         System.out.println("--------------------------");
+
+        correctWage("Z", 1000);
+        printAll();
+        System.out.println("Sum of wages: " + sumOfWages());
+        System.out.println("--------------------------");
+
         correctWage("ASASAS", 1232131);  // exception is thrown
         System.out.println("Sum of wages: " + sumOfWages());
     }
