@@ -1,11 +1,11 @@
 package com.company;
 
-import java.util.Scanner;
 
 public class Main {
 
     public static Employee [] emp = new Employee[1000];
     public static int n = 0;
+
     public static void main(String[] args) {
         addDev( "adf", 3421.34, 21, true, true);
         addDev( "df", 66, 21, false, true);
@@ -14,21 +14,23 @@ public class Main {
 
         printAll();
         System.out.println("Sum of wages: " + sumOfWages());
-
+        System.out.println("--------------------------");
         removeEmployee("df");
         printAll();
+        System.out.println("Sum of wages: " + sumOfWages());
 
+        System.out.println("--------------------------");
         removeEmployee("ddd"); // exception is thrown
         printAll();
 
-        System.out.println("Sum of wages: " + sumOfWages());
-
+        System.out.println("--------------------------");
         correctWage("Z", 1000);
         System.out.println("Sum of wages: " + sumOfWages());
+        printAll();
 
-        correctWage("ASASAS", 1232131);
+        System.out.println("--------------------------");
+        correctWage("ASASAS", 1232131);  // exception is thrown
         System.out.println("Sum of wages: " + sumOfWages());
-
     }
 
     public static void addDev(String name, double wage, int months, boolean j, boolean c){
